@@ -152,7 +152,7 @@ for threshold in return_thresholds:
 
 ''' 08. Export results to a CSV file '''
 
-csv_file_path = 'port' + instance + '_results.csv'
+csv_file_path = 'outputs/port' + instance + '_results.csv'
 with open(csv_file_path, mode='w', newline='') as file:
     fieldnames = ['Return', 'Risk', 'Desirab', 'Feasib', 'Sustainab', 'N selected', 'Weights']
     writer = csv.DictWriter(file, fieldnames=fieldnames)
