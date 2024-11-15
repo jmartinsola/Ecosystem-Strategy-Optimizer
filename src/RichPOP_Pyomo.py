@@ -8,7 +8,7 @@ import csv
 
 # Read asset mean returns, asset stdevs, and correlation matrix
 instance = '1'  # select instance between 1 and 5 for the port1 to port5 txt files
-txt_file_path = 'port' + instance + '.txt'
+txt_file_path = 'inputs/port' + instance + '.txt'
 num_assets = 0
 avg_returns = []
 st_devs = []
@@ -37,7 +37,7 @@ for i, j, corr in corr_matrix:  # careful! i and j are assets that start in 1, n
     cov_matrix[j - 1][i - 1] = cov  # covariance matrix is symmetric
 
 # Read return thresholds to build the efficient frontier
-txt_file_path = 'portef' + instance + '.txt'
+txt_file_path = 'inputs/portef' + instance + '.txt'
 return_thresholds = []
 with open(txt_file_path, 'r') as file:
     lines = file.readlines()
